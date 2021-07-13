@@ -2,6 +2,7 @@ package cn.whu.wy.dbtest.service;
 
 import cn.whu.wy.dbtest.entity.Record;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.ParameterizedPreparedStatementSetter;
@@ -21,7 +22,7 @@ import java.util.List;
  */
 @Service
 @Slf4j
-public class DBService {
+public class DBService implements InitializingBean {
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
@@ -187,5 +188,11 @@ public class DBService {
     public void init() {
         String sql = "truncate table record";
         jdbcTemplate.execute(sql);
+    }
+
+
+    @Override
+    public void afterPropertiesSet() throws Exception {
+
     }
 }
