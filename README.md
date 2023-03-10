@@ -318,7 +318,26 @@ num=110000, batchSize=1000, cost=1947, tps=56497/s
 2021/1/1 update:
 num=110000, batchSize=1000, cost=1964, tps=56008/s
 ```
+### 环境4
+PC: MECHREVO WUJIE 14 笔记本  
+OS: Windows 11 x64  
+CPU: i7-12700H  
+RAM: 16 GB (英睿达 DDR4 3200MHz 8GB x 2)  
+SSD: Intel SSD PEKNW512G8  
 
+```
+单条insert：
+num=10000, cost=8969, tps=1114/s
+
+batchInsert:
+num=110000, batchSize=1000, cost=2921, tps=37658/s
+
+batchInsert2:
+num=110000, batchSize=1000, cost=3167, tps=34733/s
+
+batchInser3:
+num=110000, batchSize=1000, cost=2146, tps=51258/s
+```
 
 
 
